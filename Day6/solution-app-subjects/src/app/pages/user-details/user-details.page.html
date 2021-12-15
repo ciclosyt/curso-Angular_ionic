@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reactive form 2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-loading-feedback [state]="state" (retryPressed)="loadUser()">
+    <form [formGroup]="form" (submit)="submitForm()">
+      <h1>Form</h1>
+      <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Birthdate</ion-label>
+        <ion-datetime formControlName="birthDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Sex</ion-label>
+        <ion-select formControlName="sex">
+          <ion-select-option value="male">Male</ion-select-option>
+          <ion-select-option value="female">Female</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone</ion-label>
+        <ion-input type="number" formControlName="phone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <div class="ion-margin ion-text-right">
+        <ion-button type="submit" [disabled]="form.invalid || isUpdating">Submit</ion-button>
+      </div>
+    </form>
+  </app-loading-feedback>
+</ion-content>

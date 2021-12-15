@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h1>Pipes built-in of Angular</h1>
+
+  <p>{{ 'hello world!' | uppercase }}</p>
+
+  <p>{{ 'HELLO WORLD!' | lowercase }}</p>
+
+  <p>{{ 9374.14 | number:'0.4-4' }}</p>
+
+  <p>{{ myDate | date:'yyyy-MM-dd' }}</p>
+
+  <p>{{ 9374.14 | currency }}</p>
+
+  <h1>Custom pipe</h1>
+
+  <p>{{ 'Lorem ipsum dolorsit blah blah' | truncate }}</p>
+
+  <p>{{ 'Lorem ipsum dolorsit blah blah' | truncate:15 }}</p>
+
+  <p>{{ text }}</p>
+
+  <h1>Traducciones</h1>
+
+  <p>{{'helloWorld' | translate}}</p>
+  <p>{{'nCats' | translate:({cats: 10})}}</p>
+
+  <p translate>helloWorld</p>
+  <p translate [translateParams]="{cats: 15}">nCats</p>
+
+  <p>{{ helloWorld$ | async }}</p>
+
+  <button (click)="toggleLanguage()">Toogle lang</button>
+</ion-content>

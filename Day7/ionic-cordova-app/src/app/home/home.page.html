@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Take-a-pic</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <img *ngIf="image" alt="" [src]="'data:image/jpg;base64,' + image" />
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button ion-fab size="large" color="primary" (click)="takePicture()">
+      <ion-icon size="large" name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

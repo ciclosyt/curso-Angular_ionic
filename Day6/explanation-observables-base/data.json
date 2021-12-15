@@ -1,0 +1,102 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Eloquent JavaScript, Second Edition",
+      "authorId": 8,
+      "published": "2014-12-14T00:00:00.000Z",
+      "publisher": "No Starch Press",
+      "pages": 472
+    },
+    {
+      "id": 2,
+      "title": "Learning JavaScript Design Patterns",
+      "authorId": 5,
+      "published": "2012-07-01T00:00:00.000Z",
+      "publisher": "O'Reilly Media",
+      "pages": 254
+    },
+    {
+      "id": 3,
+      "title": "Speaking JavaScript",
+      "authorId": 7,
+      "published": "2014-02-01T00:00:00.000Z",
+      "publisher": "O'Reilly Media",
+      "pages": 460
+    },
+    {
+      "id": 4,
+      "title": "Programming JavaScript Applications",
+      "authorId": 3,
+      "published": "2014-07-01T00:00:00.000Z",
+      "publisher": "O'Reilly Media",
+      "pages": 254
+    },
+    {
+      "id": 5,
+      "title": "Understanding ECMAScript 6",
+      "authorId": 1,
+      "published": "2016-09-03T00:00:00.000Z",
+      "publisher": "No Starch Press",
+      "pages": 352
+    },
+    {
+      "id": 6,
+      "title": "You Don't Know JS",
+      "authorId": 6,
+      "published": "2015-12-27T00:00:00.000Z",
+      "publisher": "O'Reilly Media",
+      "pages": 278
+    },
+    {
+      "id": 7,
+      "title": "Git Pocket Guide",
+      "authorId": 4,
+      "published": "2013-08-02T00:00:00.000Z",
+      "publisher": "O'Reilly Media",
+      "pages": 234
+    },
+    {
+      "id": 8,
+      "title": "Designing Evolvable Web APIs with ASP.NET",
+      "authorId": 2,
+      "published": "2014-04-07T00:00:00.000Z",
+      "publisher": "O'Reilly Media",
+      "pages": 538
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "name": "Nicholas C. Zakas"
+    },
+    {
+      "id": 2,
+      "name": "Glenn Block, et al."
+    },
+    {
+      "id": 3,
+      "name": "Eric Elliott"
+    },
+    {
+      "id": 4,
+      "name": "Richard E. Silverman"
+    },
+    {
+      "id": 5,
+      "name": "Addy Osmani"
+    },
+    {
+      "id": 6,
+      "name": "Kyle Simpson"
+    },
+    {
+      "id": 7,
+      "name": "Axel Rauschmayer"
+    },
+    {
+      "id": 8,
+      "name": "Marijn Haverbeke"
+    }
+  ]
+}

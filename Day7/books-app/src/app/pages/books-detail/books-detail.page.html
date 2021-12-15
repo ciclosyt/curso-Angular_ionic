@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start" defaultHref="/"></ion-back-button>
+    <ion-title>Book Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-loader [state]="bookState" (retry)="loadBook()">
+    <form [formGroup]="form">
+      <ion-item >
+        <ion-label position="stacked">Title</ion-label>
+        <ion-input formControlName="title"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Language</ion-label>
+        <ion-input formControlName="language"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Edition</ion-label>
+        <ion-input formControlName="edition"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Publisher</ion-label>
+        <ion-input formControlName="publisher"></ion-input>
+      </ion-item>
+    </form>
+
+    <ion-fab class="ion-row" vertical="bottom" horizontal="end" slot="fixed">
+      <ion-row>
+        <ion-col>
+          <ion-fab-button>
+            <ion-icon name="trash"></ion-icon>
+          </ion-fab-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-fab-button (click)="updateOrCreateBook()">
+            <ion-icon name="checkmark"></ion-icon>
+          </ion-fab-button>
+        </ion-col>
+      </ion-row>
+    </ion-fab>
+  </app-loader>
+</ion-content>

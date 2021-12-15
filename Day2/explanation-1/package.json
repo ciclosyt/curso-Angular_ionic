@@ -1,0 +1,18 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Node module creation example",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [
+    "node",
+    "example"
+  ],
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.23.0"
+  }
+}

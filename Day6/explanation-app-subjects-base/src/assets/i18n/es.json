@@ -1,0 +1,4 @@
+{
+  "helloWorld": "Hola Mundo",
+  "nCats": "Tengo {{cats}} gatos"
+}

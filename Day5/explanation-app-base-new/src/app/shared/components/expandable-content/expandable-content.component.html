@@ -1,0 +1,19 @@
+<ion-card>
+  <ion-card-header>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <ion-button class="primary" (click)="toggleExpand()">
+            {{ isExpanded ? "-" : "+" }}
+          </ion-button>
+        </ion-col>
+        <ion-col class="ion-padding-top">
+          <ion-card-title>{{ title }}</ion-card-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card-header>
+  <ion-card-content *ngIf="isExpanded">
+    <ng-content></ng-content>
+  </ion-card-content>
+</ion-card>

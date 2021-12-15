@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "books-app",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

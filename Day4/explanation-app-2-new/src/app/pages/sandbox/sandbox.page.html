@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sandbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <app-expandable-content
+      [title]="'Title1'"
+      (changed)="onChangedExpandable($event)"
+    >
+      <p>Contenido 1</p>
+    </app-expandable-content>
+  </ion-list>
+</ion-content>

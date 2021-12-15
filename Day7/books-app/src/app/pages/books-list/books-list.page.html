@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Books</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <app-loader [state]="booksState" (retry)="loadBooks()">
+    <ion-list>
+      <ng-container *ngIf="books?.length; else noBooks">
+        <ion-item
+          *ngFor="let book of books"
+          [routerLink]="['/books-detail/', book.id]"ç
+        >
+          <ion-label>{{ book?.title }}</ion-label>
+        </ion-item>
+      </ng-container>
+
+      <ng-template #noBooks>
+        <ion-item>
+          <ion-label>No books available</ion-label>
+        </ion-item>
+      </ng-template>
+    </ion-list>
+
+  </app-loader>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/books-detail">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

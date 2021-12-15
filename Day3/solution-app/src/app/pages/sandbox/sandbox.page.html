@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Sandbox</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <h1>Rating</h1>
+
+  <ion-button
+      color="success"
+      (click)="upVote()">
+    <ion-icon
+        slot="start"
+        name="thumbs-up"></ion-icon>
+    &nbsp;{{ upVotes }}
+  </ion-button>
+  <ion-button
+      color="danger"
+      (click)="downVote()">
+    <ion-icon
+        slot="start"
+        name="thumbs-down"></ion-icon>
+    &nbsp;{{ downVotes }}
+  </ion-button>
+  <div class="ion-margin-top">
+    {{ votesAverage.toFixed(1) }} / 10
+  </div>
+
+  <h1>Expandable content</h1>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1">
+            <ion-button
+                class="primary"
+                (click)="toggleExpand()">
+              {{ this.isExpanded ? '-' : '+' }}
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-padding-top">
+            <ion-card-title>Title</ion-card-title>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-header>
+    <ion-card-content [hidden]="!this.isExpanded">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+    </ion-card-content>
+  </ion-card>
+
+  <h1>User form</h1>
+
+  <form>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Birthdate</ion-label>
+      <ion-datetime></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Sex</ion-label>
+      <ion-select>
+        <ion-select-option value="male">Male</ion-select-option>
+        <ion-select-option value="female">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Phone</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+  </form>
+
+</ion-content>

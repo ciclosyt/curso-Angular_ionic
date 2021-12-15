@@ -1,0 +1,12 @@
+<ng-container [ngSwitch]="state">
+  <ion-item *ngSwitchCase="loaderState.loading">
+    <ion-spinner></ion-spinner>
+  </ion-item>
+
+  <ion-item *ngSwitchCase="loaderState.error">
+    <ion-label> Something went wrong... </ion-label>
+    <ion-button (click)="onRetry()">Retry</ion-button>
+  </ion-item>
+
+  <ng-content *ngSwitchCase="loaderState.loaded"></ng-content>
+</ng-container>
